@@ -4,9 +4,9 @@ import pt from 'date-fns/locale/pt';
 import { MdInsertDriveFile } from 'react-icons/md';
 import Dropzone from 'react-dropzone';
 import socket from 'socket.io-client';
+import { Container } from './styles';
 
 import logo from '../../assets/logo.svg';
-import './styles.css';
 import api from '../../services/api';
 
 export default class Box extends Component {
@@ -46,7 +46,7 @@ export default class Box extends Component {
 
     render() {
         return (
-            <div id="box-container">
+            <Container>
                 <header>
                     <img src={logo} alt="" />
                     <h1>{this.state.box.title}</h1>
@@ -76,7 +76,7 @@ export default class Box extends Component {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </Container>
         )
     }
 }
